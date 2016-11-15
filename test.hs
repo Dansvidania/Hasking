@@ -76,15 +76,11 @@ squishMap f (x:xs) = f x ++ squishMap f xs
 squish' :: [[a]] -> [a]
 squish' = squishMap id
 
-
-
 cesar :: Int -> String -> String
 cesar _ "" = ""
 cesar i xs = map (shiftLetter i) xs
-    where shiftLetter i x
-            | code `elem` [97..122] = shiftInRange 122 i code
-            | code `elem` [65..90] = shiftInRange 90 i code
-            | otherwise = x
-                where code = ord x
-                      shiftInRange top i = chr . (flip mod (top+1)) . (+(top+i)) 
-
+    where letters = ['a'..'z']++['A'..'Z']
+          shiftLetter i x
+            | x `elem` letters = (chr . (+ (base x)) . (flip mod 25) . (+ i) . (flip (-)(base x))) $ ord x
+            | otherwise = x 
+                where base x = bool 65 97 (x `elem` ['a'..'z'])
