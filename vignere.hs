@@ -1,6 +1,7 @@
 
 import Data.Bool
 import Data.Char
+import Control.Monad (forever)
 
 
 -- FIRST ATTEMPT OF IMPLEMENTATION KEEPING CHAR CASE THE SAME
@@ -48,4 +49,26 @@ type EncodedMessage = String
 vignere :: (Char -> Char -> Char) -> Key -> Message -> EncodedMessage
 vignere f key msg = zipWith f (cycle key) filteredInput
         where filteredInput = filter (/=' ') msg
+
+getString :: IO String
+getString = do
+        putStrLn "Vignere encryption system."
+        putStrLn "Insert the text you would like to encrypt/decrypt"
+        string <- getLine
+        return string
+
+getOperation :: IO String
+getOperation = do
+        putStrLn "Select what you would like to do:"
+        putStrLn "1-Encrypt\n2-Decrypt"
+        selection <- getLine
+        return selection
+
+main :: IO ()
+main = forever $ do
+        string <- getString
+        op <- getOperation
+        let result = if op == "1" then vignere encrypt "vignere" string
+                                  else vignere decrypt "vignere" string
+        putStrLn $ result
 
