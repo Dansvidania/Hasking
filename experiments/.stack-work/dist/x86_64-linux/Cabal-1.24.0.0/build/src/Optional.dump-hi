@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2016-12-04 10:27:50.092169 UTC
+2016-12-04 23:41:07.080438 UTC
 
 interface experiments-0.1.0.0-6GFn0ZiyRqI4SNp7TK7sqS:Optional 8001
-  interface hash: d1f7b8484f68f43670aa1c00a28e1e39
-  ABI hash: 05d142e32559508d163e79d34aaaac6c
-  export-list hash: e32a1b39b9d63dab036f254114e9c6eb
+  interface hash: 339d9a29c4edde04bffd9439b074e352
+  ABI hash: 22e5f60453709a3839e5dbdcdb209c27
+  export-list hash: bdfb4655a787a06409e15e28421e37b0
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: b159a15c55fa7c6870cb2eb79bbae5a5
   sig of: Nothing
@@ -14,19 +14,161 @@ interface experiments-0.1.0.0-6GFn0ZiyRqI4SNp7TK7sqS:Optional 8001
 exports:
   Optional.Optional{Optional.Nada Optional.Only}
 module dependencies:
-package dependencies: base-4.9.0.0* ghc-prim-0.5.0.0
-                      integer-gmp-1.0.0.1
+package dependencies: QuickCheck-2.8.2@QuickCheck-2.8.2-B7cXgOk7OAiKrNRsk2SfuA
+                      array-0.5.1.1@array-0.5.1.1 base-4.9.0.0*
+                      containers-0.5.7.1@containers-0.5.7.1
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-boot-th-8.0.1@ghc-boot-th-8.0.1
+                      ghc-prim-0.5.0.0 integer-gmp-1.0.0.1 pretty-1.1.3.3@pretty-1.1.3.3
+                      primitive-0.6.1.0@primitive-0.6.1.0-Ip44DqhfCp21tTUYbecwa
+                      random-1.1@random-1.1-54KmMHXjttlERYcr1mvsAe
+                      template-haskell-2.11.0.0
+                      tf-random-0.5@tf-random-0.5-4z8OJUaXC1FRNfrLPFWAD
+                      time-1.6.0.1@time-1.6.0.1 transformers-0.5.2.0@transformers-0.5.2.0
 orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar.Gregorian
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
+         time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
+         transformers-0.5.2.0@transformers-0.5.2.0:Control.Monad.Trans.Error
 family instance modules: base-4.9.0.0:Control.Applicative
-                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Const
-                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Type.Equality
-                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
-                         base-4.9.0.0:GHC.TypeLits
+                         base-4.9.0.0:Data.Complex base-4.9.0.0:Data.Either
+                         base-4.9.0.0:Data.Functor.Const base-4.9.0.0:Data.Functor.Identity
+                         base-4.9.0.0:Data.List.NonEmpty base-4.9.0.0:Data.Monoid
+                         base-4.9.0.0:Data.Semigroup base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:Data.Version base-4.9.0.0:Data.Void
+                         base-4.9.0.0:GHC.Exts base-4.9.0.0:GHC.Generics
+                         base-4.9.0.0:GHC.IO.Exception base-4.9.0.0:GHC.TypeLits
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntMap.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.IntSet.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Map.Base
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Sequence
+                         containers-0.5.7.1@containers-0.5.7.1:Data.Set.Base
+                         ghc-boot-th-8.0.1@ghc-boot-th-8.0.1:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3@pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.1.0@primitive-0.6.1.0-Ip44DqhfCp21tTUYbecwa:Control.Monad.Primitive
+                         template-haskell-2.11.0.0:Language.Haskell.TH.Syntax
+import  -/  QuickCheck-2.8.2@QuickCheck-2.8.2-B7cXgOk7OAiKrNRsk2SfuA:Test.QuickCheck a3636f7c6b928d0bf1ca94109fdc4fa1
+import  -/  QuickCheck-2.8.2@QuickCheck-2.8.2-B7cXgOk7OAiKrNRsk2SfuA:Test.QuickCheck.Arbitrary 2b7ecb7e537d61eb86703703378adf6e
+import  -/  QuickCheck-2.8.2@QuickCheck-2.8.2-B7cXgOk7OAiKrNRsk2SfuA:Test.QuickCheck.Gen 0fd68ca7a9018ca7869a870a61bd1097
 import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
 import  -/  base-4.9.0.0:GHC.Show 952347a6ab730bcb25c0854d8bc6ca51
 import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
 import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
-141acabe73229343c1881751ccbfca38
+4903babf64c5ccbe68b329bc928658c8
+  $fArbitraryOptional ::
+    Test.QuickCheck.Arbitrary.Arbitrary a =>
+    Test.QuickCheck.Arbitrary.Arbitrary (Optional.Optional a)
+  DFunId
+  {- Arity: 1, Strictness: <L,U(C(C1(U)),A)>m,
+     Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun: @ a
+                      ($dArbitrary :: Test.QuickCheck.Arbitrary.Arbitrary a).
+                  @ (Optional.Optional a)
+                  (Optional.$fArbitraryOptional_$carbitrary @ a $dArbitrary)
+                  (Optional.$fArbitraryOptional_$cshrink @ a $dArbitrary) -}
+4903babf64c5ccbe68b329bc928658c8
+  $fArbitraryOptional1 ::
+    Test.QuickCheck.Arbitrary.Arbitrary a =>
+    Test.QuickCheck.Random.QCGen
+    -> GHC.Types.Int -> Optional.Optional a
+  {- Arity: 3,
+     Strictness: <L,1*U(1*C1(C1(U)),A)><L,1*U(U,U,U,1*U,A,A)><L,U>,
+     Unfolding: (\ @ a
+                   ($dArbitrary :: Test.QuickCheck.Arbitrary.Arbitrary a)
+                   (eta :: Test.QuickCheck.Random.QCGen)
+                   (eta1 :: GHC.Types.Int) ->
+                 let {
+                   ds1 :: (System.Random.TF.Gen.TFGen, System.Random.TF.Gen.TFGen)
+                   = case eta
+                            `cast`
+                          (Test.QuickCheck.Random.N:QCGen[0]) of ww { System.Random.TF.Gen.TFGen ww1 ww2 ww3 ww4 ww5 ww6 ->
+                     case System.Random.TF.Gen.$wtfGenSplit
+                            ww1
+                            ww2
+                            ww3
+                            ww4 of ww7 { (#,#) ww8 ww9 ->
+                     (ww8, ww9) } }
+                 } in
+                 let {
+                   a1 :: a
+                   = (Test.QuickCheck.Arbitrary.arbitrary @ a $dArbitrary)
+                       `cast`
+                     (Test.QuickCheck.Gen.N:Gen[0] <a>_R)
+                       (case ds1 of wild { (,) g1 g2 ->
+                        g1 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0])) })
+                       eta1
+                 } in
+                 (Test.QuickCheck.Gen.frequency
+                    @ (Optional.Optional a)
+                    (GHC.Types.:
+                       @ (GHC.Types.Int, Test.QuickCheck.Gen.Gen (Optional.Optional a))
+                       (Optional.$fArbitraryOptional3 @ a)
+                       (GHC.Types.:
+                          @ (GHC.Types.Int, Test.QuickCheck.Gen.Gen (Optional.Optional a))
+                          (Optional.$fArbitraryOptional2,
+                           let {
+                             x :: Optional.Optional a = Optional.Only @ a a1
+                           } in
+                           (\ (ds :: Test.QuickCheck.Random.QCGen) (ds2 :: GHC.Types.Int) ->
+                            x)
+                             `cast`
+                           (Sym (Test.QuickCheck.Gen.N:Gen[0] <Optional.Optional a>_R)))
+                          (GHC.Types.[]
+                             @ (GHC.Types.Int,
+                                Test.QuickCheck.Gen.Gen (Optional.Optional a))))))
+                   `cast`
+                 (Test.QuickCheck.Gen.N:Gen[0] <Optional.Optional a>_R)
+                   (case ds1 of wild { (,) g1 g2 ->
+                    g2 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0])) })
+                   eta1) -}
+f85fa79a92b7ffdd4f45d60e2d54a447
+  $fArbitraryOptional2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 3#) -}
+4903babf64c5ccbe68b329bc928658c8
+  $fArbitraryOptional3 ::
+    (GHC.Types.Int, Test.QuickCheck.Gen.Gen (Optional.Optional a))
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (\ @ a ->
+                 (Optional.$fArbitraryOptional5,
+                  (Optional.$fArbitraryOptional4 @ a)
+                    `cast`
+                  (Sym (Test.QuickCheck.Gen.N:Gen[0] <Optional.Optional a>_R)))) -}
+4903babf64c5ccbe68b329bc928658c8
+  $fArbitraryOptional4 ::
+    Test.QuickCheck.Random.QCGen
+    -> GHC.Types.Int -> Optional.Optional a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><L,A>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a
+                   (ds :: Test.QuickCheck.Random.QCGen)
+                   (ds1 :: GHC.Types.Int) ->
+                 Optional.Nada @ a) -}
+86ddb909c9d4884e5a46caf7e1cf93ef
+  $fArbitraryOptional5 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 1#) -}
+4903babf64c5ccbe68b329bc928658c8
+  $fArbitraryOptional_$carbitrary ::
+    Test.QuickCheck.Arbitrary.Arbitrary a =>
+    Test.QuickCheck.Gen.Gen (Optional.Optional a)
+  {- Arity: 3,
+     Strictness: <L,1*U(1*C1(C1(U)),A)><L,1*U(U,U,U,1*U,A,A)><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Optional.$fArbitraryOptional1
+                  `cast`
+                (forall (a :: <*>_N).
+                 <Test.QuickCheck.Arbitrary.Arbitrary a>_R
+                 ->_R Sym (Test.QuickCheck.Gen.N:Gen[0] <Optional.Optional a>_R)) -}
+4903babf64c5ccbe68b329bc928658c8
+  $fArbitraryOptional_$cshrink ::
+    Test.QuickCheck.Arbitrary.Arbitrary a =>
+    Optional.Optional a -> [Optional.Optional a]
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><L,A>,
+     Unfolding: InlineRule (2, True, True)
+                (\ @ a
+                   ($dArbitrary :: Test.QuickCheck.Arbitrary.Arbitrary a)
+                   (ds1 :: Optional.Optional a) ->
+                 GHC.Types.[] @ (Optional.Optional a)) -}
+4903babf64c5ccbe68b329bc928658c8
   $fEqOptional ::
     GHC.Classes.Eq a => GHC.Classes.Eq (Optional.Optional a)
   DFunId
@@ -36,7 +178,7 @@ import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
                   @ (Optional.Optional a)
                   (Optional.$fEqOptional_$c== @ a $dEq)
                   (Optional.$fEqOptional_$c/= @ a $dEq) -}
-141acabe73229343c1881751ccbfca38
+4903babf64c5ccbe68b329bc928658c8
   $fEqOptional_$c/= ::
     GHC.Classes.Eq a =>
     Optional.Optional a -> Optional.Optional a -> GHC.Types.Bool
@@ -58,7 +200,7 @@ import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
                         -> case GHC.Classes.== @ a $dEq a2 b1 of wild2 {
                              GHC.Types.False -> GHC.Types.True
                              GHC.Types.True -> GHC.Types.False } } }) -}
-141acabe73229343c1881751ccbfca38
+4903babf64c5ccbe68b329bc928658c8
   $fEqOptional_$c== ::
     GHC.Classes.Eq a =>
     Optional.Optional a -> Optional.Optional a -> GHC.Types.Bool
@@ -78,7 +220,7 @@ import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
                    -> case ds1 of wild1 {
                         Optional.Nada -> GHC.Types.False
                         Optional.Only b1 -> GHC.Classes.== @ a $dEq a1 b1 } }) -}
-141acabe73229343c1881751ccbfca38
+4903babf64c5ccbe68b329bc928658c8
   $fMonoidOptional ::
     GHC.Base.Monoid a => GHC.Base.Monoid (Optional.Optional a)
   DFunId
@@ -89,7 +231,7 @@ import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
                   (Optional.$fMonoidOptional_$cmempty @ a $dMonoid)
                   (Optional.$fMonoidOptional_$cmappend @ a $dMonoid)
                   (Optional.$fMonoidOptional_$cmconcat @ a $dMonoid) -}
-141acabe73229343c1881751ccbfca38
+4903babf64c5ccbe68b329bc928658c8
   $fMonoidOptional_$cmappend ::
     GHC.Base.Monoid a =>
     Optional.Optional a -> Optional.Optional a -> Optional.Optional a
@@ -109,7 +251,7 @@ import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
                         -> Optional.Only
                              @ a
                              (GHC.Base.mappend @ a $dMonoid ipv ipv1) } }) -}
-141acabe73229343c1881751ccbfca38
+4903babf64c5ccbe68b329bc928658c8
   $fMonoidOptional_$cmconcat ::
     GHC.Base.Monoid a => [Optional.Optional a] -> Optional.Optional a
   {- Arity: 2, HasNoCafRefs, Strictness: <L,U(A,C(C1(U)),A)><S,1*U>,
@@ -132,13 +274,13 @@ import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
                                  -> Optional.Only @ a (GHC.Base.mappend @ a $dMonoid ipv ipv1) } } }
                  } in
                  go eta) -}
-141acabe73229343c1881751ccbfca38
+4903babf64c5ccbe68b329bc928658c8
   $fMonoidOptional_$cmempty ::
     GHC.Base.Monoid a => Optional.Optional a
   {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
      Unfolding: InlineRule (1, True, True)
                 (\ @ a ($dMonoid :: GHC.Base.Monoid a) -> Optional.Nada @ a) -}
-141acabe73229343c1881751ccbfca38
+4903babf64c5ccbe68b329bc928658c8
   $fShowOptional ::
     GHC.Show.Show a => GHC.Show.Show (Optional.Optional a)
   DFunId
@@ -167,7 +309,7 @@ b8bf8afc5af7eab00e5136e53168f719
 db8543410c30179b65da6b58860a95f2
   $fShowOptional5 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Nada"#) -}
-141acabe73229343c1881751ccbfca38
+4903babf64c5ccbe68b329bc928658c8
   $fShowOptional_$cshow ::
     GHC.Show.Show a => Optional.Optional a -> GHC.Base.String
   {- Arity: 2, Strictness: <L,1*U(1*C1(C1(C1(U))),A,A)><S,1*U>,
@@ -186,7 +328,7 @@ db8543410c30179b65da6b58860a95f2
                            Optional.$fShowOptional3
                            b1
                            (GHC.Types.[] @ GHC.Types.Char)) }) -}
-141acabe73229343c1881751ccbfca38
+4903babf64c5ccbe68b329bc928658c8
   $fShowOptional_$cshowList ::
     GHC.Show.Show a => [Optional.Optional a] -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <L,U(C(C1(U)),A,A)><S,1*U><L,U>,
@@ -203,7 +345,7 @@ db8543410c30179b65da6b58860a95f2
                       Optional.$fShowOptional1)
                    eta
                    eta1) -}
-141acabe73229343c1881751ccbfca38
+4903babf64c5ccbe68b329bc928658c8
   $fShowOptional_$cshowsPrec ::
     GHC.Show.Show a =>
     GHC.Types.Int -> Optional.Optional a -> GHC.Show.ShowS
@@ -282,8 +424,10 @@ bb4b81affcaa4c4a38f1ee75d73bd847
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
                    "experiments-0.1.0.0-6GFn0ZiyRqI4SNp7TK7sqS"#) -}
-141acabe73229343c1881751ccbfca38
+4903babf64c5ccbe68b329bc928658c8
   data Optional a = Nada | Only a
+instance [safe] Test.QuickCheck.Arbitrary.Arbitrary [Optional.Optional]
+  = Optional.$fArbitraryOptional
 instance [safe] GHC.Classes.Eq [Optional.Optional]
   = Optional.$fEqOptional
 instance [safe] GHC.Base.Monoid [Optional.Optional]
