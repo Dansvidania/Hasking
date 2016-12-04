@@ -1,3 +1,5 @@
+module Optional where
+
 data Optional a = Nada
                 | Only a
                 deriving (Eq, Show)
