@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2016-11-28 14:47:53.807885 UTC
+2016-12-02 14:36:32.950115 UTC
 
 interface main@main:Main 7103
-  interface hash: 66c6c8226656bf4129346a7211548b84
-  ABI hash: c36288a1bb28e71261615834ba48ff13
+  interface hash: eba2314a6b553cd8f46fe915422b5e57
+  ABI hash: fbd98f32173e5d99940df764675570b0
   export-list hash: f425ef913b54d4e807ae44cf5848c22e
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 3f3fda0b6b09f68ef3afd2b52afcedde
@@ -145,20 +145,21 @@ aae58c5fbd6f3f704843f2bbd859b14b
                            @ [GHC.Types.Char]
                            (GHC.Types.: @ GHC.Types.Char)
                            ww1) }) -}
-e2ffaaa8ad7c9bd24ad92e8736fa234e
+7c5b45c1a15bdeaecca9eef7e3858bd3
   $wa ::
     GHC.Base.String
     -> [GHC.Types.Char]
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 3, Strictness: <L,U><S,1*U><L,U>, Inline: [0],
+  {- Arity: 3, Strictness: <S,U><S,1*U><L,U>, Inline: [0],
      Unfolding: (\ ww :: GHC.Base.String
                    ww1 :: [GHC.Types.Char]
                    w :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
                  case GHC.List.$wlenAcc @ GHC.Types.Char ww1 0 of ww2 { DEFAULT ->
+                 case GHC.List.$wlenAcc @ GHC.Types.Char ww 0 of ww3 { DEFAULT ->
                  case GHC.Prim.tagToEnum#
                         @ GHC.Types.Bool
-                        (GHC.Prim.># ww2 8) of wild {
+                        (GHC.Prim.># ww2 ww3) of wild {
                    GHC.Types.False -> (# w, GHC.Tuple.() #)
                    GHC.Types.True
                    -> case GHC.IO.Handle.Text.hPutStr2
@@ -171,7 +172,7 @@ e2ffaaa8ad7c9bd24ad92e8736fa234e
                              (GHC.CString.unpackAppendCString# "Your word was "# ww)
                              GHC.Types.True
                              ipv of ds2 { (#,#) ipv2 ipv3 ->
-                      System.Exit.exitSuccess1 @ () ipv2 } } } }) -}
+                      System.Exit.exitSuccess1 @ () ipv2 } } } } }) -}
 5925f82a062d6ee74b624be4c86c6991
   $wa1 ::
     [GHC.Base.Maybe GHC.Types.Char]
@@ -298,19 +299,19 @@ b47e8e8275f42664bbeb42cbddfbc50a
   {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
      Unfolding: InlineRule (1, True, True)
                 (\ ds :: GHC.Types.Char -> GHC.Base.Nothing @ GHC.Types.Char) -}
-e0a6e4d58231e8f6b26a009ca32c3160
+08dc69c5859f346c26c9206dfe1e0d2a
   gameOver :: Main.Puzzle -> GHC.Types.IO ()
-  {- Arity: 2, Strictness: <S(LLS),1*U(U,A,1*U)><L,U>,
+  {- Arity: 2, Strictness: <S(SLS),1*U(U,A,1*U)><L,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.gameOver1
                   `cast`
                 (<Main.Puzzle>_R ->_R Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
-cd688e7b2b5d8c3ee7f4faf23b013856
+dc0eeaea8f1380b5a1c441e00bed0889
   gameOver1 ::
     Main.Puzzle
     -> GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
-  {- Arity: 2, Strictness: <S(LLS),1*U(U,A,1*U)><L,U>,
+  {- Arity: 2, Strictness: <S(SLS),1*U(U,A,1*U)><L,U>,
      Inline: INLINE[0],
      Unfolding: InlineRule (2, True, False)
                 (\ w :: Main.Puzzle

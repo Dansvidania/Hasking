@@ -17,7 +17,7 @@ version = Version [0,1,0,0] []
 bindir, libdir, datadir, libexecdir, sysconfdir :: FilePath
 
 bindir     = "/media/dan/data/code/haskell/hasking/hangman/.stack-work/install/x86_64-linux/lts-5.8/7.10.3/bin"
-libdir     = "/media/dan/data/code/haskell/hasking/hangman/.stack-work/install/x86_64-linux/lts-5.8/7.10.3/lib/x86_64-linux-ghc-7.10.3/hangman-0.1.0.0-I2Ezo0PAKD5ITUGxw9hLC4"
+libdir     = "/media/dan/data/code/haskell/hasking/hangman/.stack-work/install/x86_64-linux/lts-5.8/7.10.3/lib/x86_64-linux-ghc-7.10.3/hangman-0.1.0.0-Cl7LAeSwo0rI4Wz5e7V4SK"
 datadir    = "/media/dan/data/code/haskell/hasking/hangman/.stack-work/install/x86_64-linux/lts-5.8/7.10.3/share/x86_64-linux-ghc-7.10.3/hangman-0.1.0.0"
 libexecdir = "/media/dan/data/code/haskell/hasking/hangman/.stack-work/install/x86_64-linux/lts-5.8/7.10.3/libexec"
 sysconfdir = "/media/dan/data/code/haskell/hasking/hangman/.stack-work/install/x86_64-linux/lts-5.8/7.10.3/etc"
