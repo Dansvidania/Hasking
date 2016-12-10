@@ -30,7 +30,7 @@ version = Version [0,1,0,0] []
 bindir, libdir, datadir, libexecdir, sysconfdir :: FilePath
 
 bindir     = "/media/dan/data/code/haskell/hasking/experiments/.stack-work/install/x86_64-linux/lts-7.11/8.0.1/bin"
-libdir     = "/media/dan/data/code/haskell/hasking/experiments/.stack-work/install/x86_64-linux/lts-7.11/8.0.1/lib/x86_64-linux-ghc-8.0.1/experiments-0.1.0.0-6GFn0ZiyRqI4SNp7TK7sqS"
+libdir     = "/media/dan/data/code/haskell/hasking/experiments/.stack-work/install/x86_64-linux/lts-7.11/8.0.1/lib/x86_64-linux-ghc-8.0.1/experiments-0.1.0.0-CnVzBd4qESF6QW57bE4VDa"
 datadir    = "/media/dan/data/code/haskell/hasking/experiments/.stack-work/install/x86_64-linux/lts-7.11/8.0.1/share/x86_64-linux-ghc-8.0.1/experiments-0.1.0.0"
 libexecdir = "/media/dan/data/code/haskell/hasking/experiments/.stack-work/install/x86_64-linux/lts-7.11/8.0.1/libexec"
 sysconfdir = "/media/dan/data/code/haskell/hasking/experiments/.stack-work/install/x86_64-linux/lts-7.11/8.0.1/etc"

@@ -1,11 +1,11 @@
 
 ==================== FINAL INTERFACE ====================
-2016-12-04 23:41:07.080438 UTC
+2016-12-10 00:28:35.935847 UTC
 
-interface experiments-0.1.0.0-6GFn0ZiyRqI4SNp7TK7sqS:Optional 8001
-  interface hash: 339d9a29c4edde04bffd9439b074e352
-  ABI hash: 22e5f60453709a3839e5dbdcdb209c27
-  export-list hash: bdfb4655a787a06409e15e28421e37b0
+interface experiments-0.1.0.0-CnVzBd4qESF6QW57bE4VDa:Optional 8001
+  interface hash: 24988e1eb9bc939cbefa9379c3fcd8a8
+  ABI hash: 88a0f565bd46d723042252c5a16c633e
+  export-list hash: 5039ad35a32b4856ed5bb7dadc06b73a
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: b159a15c55fa7c6870cb2eb79bbae5a5
   sig of: Nothing
@@ -54,7 +54,7 @@ import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
 import  -/  base-4.9.0.0:GHC.Show 952347a6ab730bcb25c0854d8bc6ca51
 import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
 import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
-4903babf64c5ccbe68b329bc928658c8
+bb8305ce1891fbf0b7a197be2583366f
   $fArbitraryOptional ::
     Test.QuickCheck.Arbitrary.Arbitrary a =>
     Test.QuickCheck.Arbitrary.Arbitrary (Optional.Optional a)
@@ -66,7 +66,7 @@ import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
                   @ (Optional.Optional a)
                   (Optional.$fArbitraryOptional_$carbitrary @ a $dArbitrary)
                   (Optional.$fArbitraryOptional_$cshrink @ a $dArbitrary) -}
-4903babf64c5ccbe68b329bc928658c8
+bb8305ce1891fbf0b7a197be2583366f
   $fArbitraryOptional1 ::
     Test.QuickCheck.Arbitrary.Arbitrary a =>
     Test.QuickCheck.Random.QCGen
@@ -121,10 +121,10 @@ import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
                    (case ds1 of wild { (,) g1 g2 ->
                     g2 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0])) })
                    eta1) -}
-f85fa79a92b7ffdd4f45d60e2d54a447
+7e91b8f51ae4c8e68420a9a57c234ae2
   $fArbitraryOptional2 :: GHC.Types.Int
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 3#) -}
-4903babf64c5ccbe68b329bc928658c8
+bb8305ce1891fbf0b7a197be2583366f
   $fArbitraryOptional3 ::
     (GHC.Types.Int, Test.QuickCheck.Gen.Gen (Optional.Optional a))
   {- HasNoCafRefs, Strictness: m,
@@ -133,7 +133,7 @@ f85fa79a92b7ffdd4f45d60e2d54a447
                   (Optional.$fArbitraryOptional4 @ a)
                     `cast`
                   (Sym (Test.QuickCheck.Gen.N:Gen[0] <Optional.Optional a>_R)))) -}
-4903babf64c5ccbe68b329bc928658c8
+bb8305ce1891fbf0b7a197be2583366f
   $fArbitraryOptional4 ::
     Test.QuickCheck.Random.QCGen
     -> GHC.Types.Int -> Optional.Optional a
@@ -143,10 +143,10 @@ f85fa79a92b7ffdd4f45d60e2d54a447
                    (ds :: Test.QuickCheck.Random.QCGen)
                    (ds1 :: GHC.Types.Int) ->
                  Optional.Nada @ a) -}
-86ddb909c9d4884e5a46caf7e1cf93ef
+578728b527b65fed4968e18b71f451a0
   $fArbitraryOptional5 :: GHC.Types.Int
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 1#) -}
-4903babf64c5ccbe68b329bc928658c8
+bb8305ce1891fbf0b7a197be2583366f
   $fArbitraryOptional_$carbitrary ::
     Test.QuickCheck.Arbitrary.Arbitrary a =>
     Test.QuickCheck.Gen.Gen (Optional.Optional a)
@@ -158,7 +158,7 @@ f85fa79a92b7ffdd4f45d60e2d54a447
                 (forall (a :: <*>_N).
                  <Test.QuickCheck.Arbitrary.Arbitrary a>_R
                  ->_R Sym (Test.QuickCheck.Gen.N:Gen[0] <Optional.Optional a>_R)) -}
-4903babf64c5ccbe68b329bc928658c8
+bb8305ce1891fbf0b7a197be2583366f
   $fArbitraryOptional_$cshrink ::
     Test.QuickCheck.Arbitrary.Arbitrary a =>
     Optional.Optional a -> [Optional.Optional a]
@@ -168,7 +168,7 @@ f85fa79a92b7ffdd4f45d60e2d54a447
                    ($dArbitrary :: Test.QuickCheck.Arbitrary.Arbitrary a)
                    (ds1 :: Optional.Optional a) ->
                  GHC.Types.[] @ (Optional.Optional a)) -}
-4903babf64c5ccbe68b329bc928658c8
+bb8305ce1891fbf0b7a197be2583366f
   $fEqOptional ::
     GHC.Classes.Eq a => GHC.Classes.Eq (Optional.Optional a)
   DFunId
@@ -178,7 +178,7 @@ f85fa79a92b7ffdd4f45d60e2d54a447
                   @ (Optional.Optional a)
                   (Optional.$fEqOptional_$c== @ a $dEq)
                   (Optional.$fEqOptional_$c/= @ a $dEq) -}
-4903babf64c5ccbe68b329bc928658c8
+bb8305ce1891fbf0b7a197be2583366f
   $fEqOptional_$c/= ::
     GHC.Classes.Eq a =>
     Optional.Optional a -> Optional.Optional a -> GHC.Types.Bool
@@ -200,7 +200,7 @@ f85fa79a92b7ffdd4f45d60e2d54a447
                         -> case GHC.Classes.== @ a $dEq a2 b1 of wild2 {
                              GHC.Types.False -> GHC.Types.True
                              GHC.Types.True -> GHC.Types.False } } }) -}
-4903babf64c5ccbe68b329bc928658c8
+bb8305ce1891fbf0b7a197be2583366f
   $fEqOptional_$c== ::
     GHC.Classes.Eq a =>
     Optional.Optional a -> Optional.Optional a -> GHC.Types.Bool
@@ -220,7 +220,7 @@ f85fa79a92b7ffdd4f45d60e2d54a447
                    -> case ds1 of wild1 {
                         Optional.Nada -> GHC.Types.False
                         Optional.Only b1 -> GHC.Classes.== @ a $dEq a1 b1 } }) -}
-4903babf64c5ccbe68b329bc928658c8
+bb8305ce1891fbf0b7a197be2583366f
   $fMonoidOptional ::
     GHC.Base.Monoid a => GHC.Base.Monoid (Optional.Optional a)
   DFunId
@@ -231,7 +231,7 @@ f85fa79a92b7ffdd4f45d60e2d54a447
                   (Optional.$fMonoidOptional_$cmempty @ a $dMonoid)
                   (Optional.$fMonoidOptional_$cmappend @ a $dMonoid)
                   (Optional.$fMonoidOptional_$cmconcat @ a $dMonoid) -}
-4903babf64c5ccbe68b329bc928658c8
+bb8305ce1891fbf0b7a197be2583366f
   $fMonoidOptional_$cmappend ::
     GHC.Base.Monoid a =>
     Optional.Optional a -> Optional.Optional a -> Optional.Optional a
@@ -251,7 +251,7 @@ f85fa79a92b7ffdd4f45d60e2d54a447
                         -> Optional.Only
                              @ a
                              (GHC.Base.mappend @ a $dMonoid ipv ipv1) } }) -}
-4903babf64c5ccbe68b329bc928658c8
+bb8305ce1891fbf0b7a197be2583366f
   $fMonoidOptional_$cmconcat ::
     GHC.Base.Monoid a => [Optional.Optional a] -> Optional.Optional a
   {- Arity: 2, HasNoCafRefs, Strictness: <L,U(A,C(C1(U)),A)><S,1*U>,
@@ -274,13 +274,13 @@ f85fa79a92b7ffdd4f45d60e2d54a447
                                  -> Optional.Only @ a (GHC.Base.mappend @ a $dMonoid ipv ipv1) } } }
                  } in
                  go eta) -}
-4903babf64c5ccbe68b329bc928658c8
+bb8305ce1891fbf0b7a197be2583366f
   $fMonoidOptional_$cmempty ::
     GHC.Base.Monoid a => Optional.Optional a
   {- Arity: 1, HasNoCafRefs, Strictness: <L,A>,
      Unfolding: InlineRule (1, True, True)
                 (\ @ a ($dMonoid :: GHC.Base.Monoid a) -> Optional.Nada @ a) -}
-4903babf64c5ccbe68b329bc928658c8
+bb8305ce1891fbf0b7a197be2583366f
   $fShowOptional ::
     GHC.Show.Show a => GHC.Show.Show (Optional.Optional a)
   DFunId
@@ -291,25 +291,25 @@ f85fa79a92b7ffdd4f45d60e2d54a447
                   (Optional.$fShowOptional_$cshowsPrec @ a $dShow)
                   (Optional.$fShowOptional_$cshow @ a $dShow)
                   (Optional.$fShowOptional_$cshowList @ a $dShow) -}
-84c46f88bcdd82dcc851166f75aedf9b
+f6fa720c7cf2c7bc80985287dc62c2de
   $fShowOptional1 :: GHC.Types.Int
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
-f119ebb321d2d50d82f12849a1ec8dfc
+f1d8c3a590a2fd20b6930d2e568d074e
   $fShowOptional2 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Only "#) -}
-b8bf8afc5af7eab00e5136e53168f719
+7793134be2f032c3757b58747bb32fa7
   $fShowOptional3 :: GHC.Types.Int
   {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 11#) -}
-0128f219553da569546fc8d95dcbc895
+cc4fcdaaa46397873095aa336f39ebeb
   $fShowOptional4 :: GHC.Show.ShowS
   {- Arity: 1,
      Unfolding: (GHC.Base.++
                    @ GHC.Types.Char
                    Optional.$fShowOptional5) -}
-db8543410c30179b65da6b58860a95f2
+9c2c5d49638b97227d48b392f62dcc0e
   $fShowOptional5 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# "Nada"#) -}
-4903babf64c5ccbe68b329bc928658c8
+bb8305ce1891fbf0b7a197be2583366f
   $fShowOptional_$cshow ::
     GHC.Show.Show a => Optional.Optional a -> GHC.Base.String
   {- Arity: 2, Strictness: <L,1*U(1*C1(C1(C1(U))),A,A)><S,1*U>,
@@ -328,7 +328,7 @@ db8543410c30179b65da6b58860a95f2
                            Optional.$fShowOptional3
                            b1
                            (GHC.Types.[] @ GHC.Types.Char)) }) -}
-4903babf64c5ccbe68b329bc928658c8
+bb8305ce1891fbf0b7a197be2583366f
   $fShowOptional_$cshowList ::
     GHC.Show.Show a => [Optional.Optional a] -> GHC.Show.ShowS
   {- Arity: 3, Strictness: <L,U(C(C1(U)),A,A)><S,1*U><L,U>,
@@ -345,7 +345,7 @@ db8543410c30179b65da6b58860a95f2
                       Optional.$fShowOptional1)
                    eta
                    eta1) -}
-4903babf64c5ccbe68b329bc928658c8
+bb8305ce1891fbf0b7a197be2583366f
   $fShowOptional_$cshowsPrec ::
     GHC.Show.Show a =>
     GHC.Types.Int -> Optional.Optional a -> GHC.Show.ShowS
@@ -377,54 +377,54 @@ db8543410c30179b65da6b58860a95f2
                                 @ GHC.Types.Char
                                 Optional.$fShowOptional2
                                 (g (GHC.Types.: @ GHC.Types.Char GHC.Show.shows6 x1))) } } }) -}
-1b844f57cc0632a118803f8c66f4f581
+d36fc4671ec58b70e2927ee4bf35aba7
   $tc'Nada :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.TyCon
-                   5413824988526047824##
-                   1696263185294116316##
+                   6065122433697692909##
+                   7007829868243081475##
                    Optional.$trModule
                    Optional.$tc'Nada1) -}
-6c4a70ba0fa60e0c8c7c3c5d90b3459c
+de4f0d04caacc7efe8aaf6a03aeb0eef
   $tc'Nada1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "'Nada"#) -}
-3a0d1921b0ce68588a533d1236a6b8cc
+e40156f7440a7807511f0112e9c3d92c
   $tc'Only :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.TyCon
-                   12813519853623198702##
-                   15126154982241136192##
+                   10260691367763591357##
+                   1216384380970501102##
                    Optional.$trModule
                    Optional.$tc'Only1) -}
-d02b0b5a641a11c3541711f6e6d7229b
+442f3c536ef22038ea4013ee94eb5634
   $tc'Only1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "'Only"#) -}
-773c233175743271a3a8837554e4f5d5
+6e3075d45c490a43d736b5f854a44a36
   $tcOptional :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.TyCon
-                   5581893403166196034##
-                   7427850469548403697##
+                   10406372522569494870##
+                   13959557454915754855##
                    Optional.$trModule
                    Optional.$trModule1) -}
-2c23522ed54fdd7af4e06a74a04a3725
+7ec0bace3ebaa99beac4f901476a0cf0
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
      Unfolding: (GHC.Types.Module
                    Optional.$trModule2
                    Optional.$trModule1) -}
-bb4b81affcaa4c4a38f1ee75d73bd847
+596132aaba29c94a2eb67f50c714807f
   $trModule1 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS "Optional"#) -}
-076c10b8e35a23a7a0b7f6213b5ef678
+a819365c086a39e2a79e9b112bd75ddc
   $trModule2 :: GHC.Types.TrName
   {- HasNoCafRefs, Strictness: m1,
      Unfolding: (GHC.Types.TrNameS
-                   "experiments-0.1.0.0-6GFn0ZiyRqI4SNp7TK7sqS"#) -}
-4903babf64c5ccbe68b329bc928658c8
+                   "experiments-0.1.0.0-CnVzBd4qESF6QW57bE4VDa"#) -}
+bb8305ce1891fbf0b7a197be2583366f
   data Optional a = Nada | Only a
 instance [safe] Test.QuickCheck.Arbitrary.Arbitrary [Optional.Optional]
   = Optional.$fArbitraryOptional

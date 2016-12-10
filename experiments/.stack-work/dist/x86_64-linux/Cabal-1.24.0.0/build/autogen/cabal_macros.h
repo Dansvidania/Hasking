@@ -21,12 +21,26 @@
   (major1) == 4 && (major2) <  9 || \
   (major1) == 4 && (major2) == 9 && (minor) <= 0)
 
+/* package checkers-0.4.6 */
+#define VERSION_checkers "0.4.6"
+#define MIN_VERSION_checkers(major1,major2,minor) (\
+  (major1) <  0 || \
+  (major1) == 0 && (major2) <  4 || \
+  (major1) == 0 && (major2) == 4 && (minor) <= 6)
+
 /* package hspec-2.2.4 */
 #define VERSION_hspec "2.2.4"
 #define MIN_VERSION_hspec(major1,major2,minor) (\
   (major1) <  2 || \
   (major1) == 2 && (major2) <  2 || \
   (major1) == 2 && (major2) == 2 && (minor) <= 4)
+
+/* tool cpphs-1.20.2 */
+#define TOOL_VERSION_cpphs "1.20.2"
+#define MIN_TOOL_VERSION_cpphs(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  20 || \
+  (major1) == 1 && (major2) == 20 && (minor) <= 2)
 
 /* tool gcc-5.4.0 */
 #define TOOL_VERSION_gcc "5.4.0"
@@ -84,7 +98,7 @@
   (major1) == 2 && (major2) <  26 || \
   (major1) == 2 && (major2) == 26 && (minor) <= 0)
 
-#define CURRENT_COMPONENT_ID "experiments-0.1.0.0-6GFn0ZiyRqI4SNp7TK7sqS"
+#define CURRENT_COMPONENT_ID "experiments-0.1.0.0-CnVzBd4qESF6QW57bE4VDa"
 
-#define CURRENT_PACKAGE_KEY "experiments-0.1.0.0-6GFn0ZiyRqI4SNp7TK7sqS"
+#define CURRENT_PACKAGE_KEY "experiments-0.1.0.0-CnVzBd4qESF6QW57bE4VDa"
 
