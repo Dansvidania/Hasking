@@ -3,9 +3,11 @@
 
 module FunctorCheck where
 
-
+import Data.Monoid
 import Test.QuickCheck
 import Test.QuickCheck.Function
+import Test.QuickCheck.Checkers
+import Test.QuickCheck.Classes
 import Test.Hspec
 import GHC.Generics
 
@@ -13,13 +15,13 @@ type TypeIdentity = Bool
 type TypeComposition = Fun Int Int -> Fun Int Int -> Bool
 
 
-checkFunctor :: forall f a. (Functor f) => String -> f a -> IO ()
-checkFunctor description f = hspec $ do
-    describe description $ do
-        it "identity property" $ do
-            property $ (functorIdentity :: f a -> TypeIdentity)
-        it "composition property" $ do
-            property $ (functorCompose' :: f a -> TypeComposition)
+--checkFunctor :: forall f a. (Functor f) => String -> f a -> IO ()
+--checkFunctor description f = hspec $ do
+--    describe description $ do
+--       it "identity property" $ do
+--          property $ (functorIdentity :: f a -> TypeIdentity)
+--      it "composition property" $ do
+--          property $ (functorCompose' :: f a -> TypeComposition)
 
 
 functorIdentity :: (Functor f, Eq (f a)) => f a -> Bool
@@ -62,6 +64,23 @@ checkIdentity = hspec $ do
             it "composition property" $ do
                 property $ (functorCompose' :: IdentityCompose)
 
+data Two a= Two a a deriving (Eq, Show)
+
+instance Arbitrary a => Arbitrary (Two a) where
+        arbitrary = do
+            x <- arbitrary
+            y <- arbitrary
+            return (Two x y)
+
+instance Functor (Two) where
+        fmap f (Two x y) = Two (f x) (f y)
+
+instance Applicative (Two) where
+        pure x = Two x x
+        (Two f g) <*> (Two x y) = Two (f x) (g y)
+
+instance Eq a => EqProp (Two a) where
+        Two x y =-= Two a b = property $ (x == a) && (y == b)
 
 
 data Pair a b = Pair a b deriving (Generic, Eq, Show)
@@ -74,6 +93,13 @@ instance (Arbitrary a, Arbitrary b) => Arbitrary (Pair a b) where
             a <- arbitrary
             b <- arbitrary
             return $ Pair a b
+
+instance Monoid a => Applicative (Pair a) where
+        pure = Pair mempty
+        Pair x f <*> Pair y a = Pair (x <> y) (f a)
+
+instance (Eq a, Eq b) => EqProp (Pair a b) where
+        Pair x y =-= Pair a b = property $ x == a && y == b
 
 type PairIdentity = Pair Int Int -> Bool
 type PairCompose = Pair Int Int -> IntToInt -> IntToInt -> Bool
