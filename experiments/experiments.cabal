@@ -22,3 +22,5 @@ library
                      , hspec
                      , QuickCheck
                      , checkers
+                     , bytestring
+                     , wreq

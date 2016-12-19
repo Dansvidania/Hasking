@@ -8,37 +8,7 @@ import Test.QuickCheck
 import Test.QuickCheck.Function
 import Test.QuickCheck.Checkers
 import Test.QuickCheck.Classes
-import Test.Hspec
 import GHC.Generics
-
-type TypeIdentity = Bool
-type TypeComposition = Fun Int Int -> Fun Int Int -> Bool
-
-
---checkFunctor :: forall f a. (Functor f) => String -> f a -> IO ()
---checkFunctor description f = hspec $ do
---    describe description $ do
---       it "identity property" $ do
---          property $ (functorIdentity :: f a -> TypeIdentity)
---      it "composition property" $ do
---          property $ (functorCompose' :: f a -> TypeComposition)
-
-
-functorIdentity :: (Functor f, Eq (f a)) => f a -> Bool
-functorIdentity f = fmap id f == f
-
-functorCompose :: (Eq (f c), Functor f) => (b -> c)
-                                        -> (a -> b)
-                                        -> f a
-                                        -> Bool
-functorCompose f g x = fmap (f . g) x == (fmap f . fmap g) x
-
-functorCompose' :: (Eq (f c), Functor f) => f a
-                                         -> Fun b c
-                                         -> Fun a b
-                                         -> Bool
-functorCompose' x (Fun _ f) (Fun _ g) = 
-        (fmap (f . g) x) == (fmap f . fmap g $ x)
 
 type IntToInt = Fun Int Int
 
@@ -53,16 +23,19 @@ instance Arbitrary a => Arbitrary (Identity a) where
 instance Functor Identity where
         fmap g (Identity x) = Identity (g x)
 
+instance Applicative Identity where
+        pure = Identity
+        Identity f <*> Identity x = Identity (f x)
+
+instance Foldable Identity where
+        foldMap f (Identity x) = f x
+
+instance Traversable Identity where
+        traverse f (Identity x) = Identity <$> f x
+
 type IdentityIdentity = Identity Int -> Bool
 type IdentityCompose = Identity Int -> IntToInt -> IntToInt -> Bool
 
-checkIdentity :: IO ()
-checkIdentity = hspec $ do
-        describe "Identity functor" $ do
-            it "identity property" $ do
-                property $ (functorIdentity :: IdentityIdentity)
-            it "composition property" $ do
-                property $ (functorCompose' :: IdentityCompose)
 
 data Two a= Two a a deriving (Eq, Show)
 
@@ -101,18 +74,6 @@ instance Monoid a => Applicative (Pair a) where
 instance (Eq a, Eq b) => EqProp (Pair a b) where
         Pair x y =-= Pair a b = property $ x == a && y == b
 
-type PairIdentity = Pair Int Int -> Bool
-type PairCompose = Pair Int Int -> IntToInt -> IntToInt -> Bool
-
-checkPair :: IO ()
-checkPair = hspec $ do
-        describe "Pair functor" $ do
-            it "identity property" $ do
-                property $ (functorIdentity :: PairIdentity)
-            it "composition property" $ do
-                property $ (functorCompose' :: PairCompose)
-                
-
 
 data Four a b c d = Four a b c d deriving (Eq, Show, Generic)
 
@@ -127,30 +88,4 @@ instance (Arbitrary a, Arbitrary b, Arbitrary c, Arbitrary d) =>
                 c <- arbitrary
                 d <- arbitrary
                 return $ Four a b c d
-
-type FourIdentity = Four Int Int Int Int -> Bool
-type FourCompose = Four Int Int Int Int -> IntToInt -> IntToInt -> Bool
-
-checkFour :: IO ()
-checkFour = hspec $ do
-    describe "Four functor" $ do
-        it "identity" $ do
-            property $ (functorIdentity :: FourIdentity)
-        it "composition" $ do
-            property $ (functorCompose' :: FourCompose)
-
-
-
-
-
-
-
-
-main :: IO ()
-main = do
-        checkIdentity
-        checkPair
-        checkFour
-
-
 
