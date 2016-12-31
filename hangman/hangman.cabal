@@ -14,7 +14,7 @@ cabal-version:       >=1.10
 
 library
   hs-source-dirs:       src
-  exposed-modules:      Hangman
+  exposed-modules:      Main
   build-depends:        base >= 4.7 && < 5
                       , QuickCheck
                       , random
@@ -24,7 +24,7 @@ library
 
 executable hangman
   hs-source-dirs:       src
-  main-is:              Hangman.hs
+  main-is:              Main.hs
   default-language:     Haskell2010
   build-depends:        base >= 4.7 && < 5
                       , random

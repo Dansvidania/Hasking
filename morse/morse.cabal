@@ -23,7 +23,7 @@ library
   default-language:    Haskell2010
 
 executable morse
-  hs-source-dirs:      src
+  hs-source-dirs:      app
   main-is:             Main.hs
   ghc-options:         -Wall -fwarn-tabs -threaded -rtsopts -with-rtsopts=-N
   build-depends:       base
