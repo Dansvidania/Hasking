@@ -3,7 +3,6 @@
 module Main where
 
 import Control.Monad (replicateM)
-import Control.Monad.Reader
 import Control.Monad.IO.Class (liftIO)
 import qualified Data.ByteString.Char8 as BC
 import Data.Text.Encoding (decodeUtf8, encodeUtf8)
@@ -20,11 +19,10 @@ randomElement :: String -> IO Char
 randomElement xs = do
   let maxIndex :: Int
       maxIndex = length xs - 1
-  -- Right of arrow is IO Int, so randomDigit is Int
   randomDigit <- SR.randomRIO (0, maxIndex) :: IO Int
   return (xs !! randomDigit)
 
-shortyGen :: IO String
+shortyGen :: IO [Char]
 shortyGen = replicateM 7 (randomElement alphaNum)
 
 saveURI :: R.Connection -> BC.ByteString -> BC.ByteString -> IO (Either R.Reply R.Status)
@@ -48,8 +46,8 @@ shortyAintUri uri = TL.concat [uri, " wasn't a url, did you forget http://?"]
 shortyFound :: TL.Text -> TL.Text
 shortyFound tbs = TL.concat ["<a href=\"", tbs, "\">", tbs, "</a>"]
 
-app' :: R.Connection -> ScottyM ()
-app' rConn = do
+app :: R.Connection -> ScottyM ()
+app rConn = do
   get "/" $
     do uri <- param "uri"
        let parsedUri :: Maybe URI
@@ -66,7 +64,7 @@ app' rConn = do
     do short <- param "short"
        uri <- liftIO (getURI rConn short)
        case uri of
-         Left reply -> text (TL.pack (show reply))
+         Left reply -> text (TL.pack $ show reply)
          Right mbBS ->
            case mbBS of
              Nothing -> text "uri not found"
@@ -74,13 +72,7 @@ app' rConn = do
                where tbs :: TL.Text
                      tbs = TL.fromStrict (decodeUtf8 bs)
 
-liftReaderT :: m a -> ReaderT r m a
-liftReaderT m = ReaderT $ const m
-
-app :: ReaderT R.Connection ScottyM ()
-app = ask >>= liftReaderT . app'
-
 main :: IO ()
 main = do
-  conn <- R.connect R.defaultConnectInfo
-  scotty 3000 (runReaderT app conn)
+  rConn <- R.connect R.defaultConnectInfo
+  scotty 3000 (app rConn)
