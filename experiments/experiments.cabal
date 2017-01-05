@@ -24,3 +24,11 @@ library
                      , checkers
                      , bytestring
                      , wreq
+                     , random
+                     , transformers
+                     , trifecta
+                     , containers
+                     , text
+                     , raw-strings-qq
+                     , attoparsec
+                     , parsec
