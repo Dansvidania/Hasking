@@ -32,3 +32,4 @@ library
                      , raw-strings-qq
                      , attoparsec
                      , parsec
+                     , mtl

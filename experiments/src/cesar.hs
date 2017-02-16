@@ -14,7 +14,7 @@ letters = ['a'..'z']++['A'..'Z']
 shiftLetter :: Int -> Char -> Char
 shiftLetter i x
     | x `elem` letters = (chr . (+ (base x)) . (flip mod 25) . (+ i) . (flip (-)(base x))) $ ord x
-    | otherwise = x 
+      | otherwise = x 
         where base y = bool 65 97 (y `elem` ['a'..'z'])
 
 
