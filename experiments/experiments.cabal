@@ -33,3 +33,6 @@ library
                      , attoparsec
                      , parsec
                      , mtl
+                     , aeson
+                     , criterion
+                     , scientific
