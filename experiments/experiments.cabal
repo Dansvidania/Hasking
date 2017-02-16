@@ -32,3 +32,6 @@ library
                      , raw-strings-qq
                      , attoparsec
                      , parsec
+                     , aeson
+                     , criterion
+                     , scientific
