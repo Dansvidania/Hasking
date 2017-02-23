@@ -5,12 +5,12 @@ newtype DList a = DL
   }
 
 empty :: DList a
-empty = DL $ (id)
+empty = DL $ ([]++)
 
 {-# INLINE empty #-}
 
 singleton :: a -> DList a
-singleton x = DL $ (x :)
+singleton x = DL $ (x:)
 
 {-# INLINE singleton #-}
 
@@ -29,7 +29,7 @@ cons x xs = DL ((x :) . unDL xs)
 infixl `snoc`
 
 snoc :: DList a -> a -> DList a
-snoc dl x = DL $ \n -> unDL dl [x] ++ n
+snoc dl x = DL $ \n -> append n $ singleton x
 
 {-# INLINE snoc #-}
 
